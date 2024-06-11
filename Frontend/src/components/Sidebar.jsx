@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom'
 const Sidebar = () => {
   return (
     <div>
-        <div className="col-span-1 bg-blue-200 h-full mx-2 rounded-lg">
+      <div className="col-span-1 bg-blue-200 h-full mx-2 rounded-lg">
         <div className='flex items-center justify-center '>
           <div className="flex items-center justify-center w-12 h-12 bg-gray-200 mx-2 rounded-full">
-            <div className="text-gray-800 text-3xl font-bold">+</div>
+            <Link to="/todaypage" className="text-gray-800 text-3xl font-bold">+</Link>
           </div>
           <div>
             <div className='py-2 w-full px-2 mx-2'>
@@ -44,17 +44,22 @@ const Sidebar = () => {
 
 
         <div className='flex flex-col w-6/8 px-3 '>
-        <Link to='/'>
-        <div className='hover:bg-slate-600 cursor-pointer  p-2  w-full bg-slate-200 my-2 rounded-lg' >
-            <p className='font-semibold text-center text-2xl'>All Entries</p>
-          </div>
-        </Link>
-         <Link to='/bookmarks'>
-         <div className='hover:bg-slate-600 cursor-pointer  p-2  w-full bg-slate-200 my-2 rounded-lg' >
-            <p className='font-semibold text-center text-2xl'>BookMarks</p>
-          </div>
-         </Link>
-        
+          <Link to='/'>
+            <div className='hover:bg-slate-600 cursor-pointer  p-2  w-full bg-slate-200 my-2 rounded-lg' >
+              <p className='font-semibold text-center text-2xl'>All Entries</p>
+            </div>
+          </Link>
+          <Link to='/bookmarks'>
+            <div className='hover:bg-slate-600 cursor-pointer  p-2  w-full bg-slate-200 my-2 rounded-lg' >
+              <p className='font-semibold text-center text-2xl'>BookMarks</p>
+            </div>
+          </Link>
+          <Link to='/deletedentries'>
+            <div className='hover:bg-slate-600 cursor-pointer  p-2  w-full bg-slate-200 my-2 rounded-lg' >
+              <p className='font-semibold text-center text-2xl'>Deleted Entries</p>
+            </div>
+          </Link>
+
         </div>
 
         <div className="border-b-2 border-gray-300 mx-2 my-4"></div>
@@ -76,6 +81,11 @@ const Sidebar = () => {
           </div>
         </div>
 
+        <Link to='/buddycorner'>
+          <div className='hover:bg-slate-600 cursor-pointer  p-2  w-full bg-slate-200 my-2 rounded-lg' >
+            <p className='font-semibold text-center text-2xl'>Buddy's Corner</p>
+          </div>
+        </Link>
       </div>
     </div>
   )

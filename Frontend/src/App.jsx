@@ -5,6 +5,7 @@ import Home from './Pages/Home'
 import { Navigate } from 'react-router-dom'
 import BuddysCorner from './Pages/BuddysCorner';
 import BookMarks from './Pages/BookMarks';
+import Todaypage from './Pages/Todaypage'
 function App() {
 
 
@@ -27,6 +28,8 @@ function App() {
               <Route path='/bookmarks' element={!authUser? (<Navigate to="/"/>):(<BookMarks/>)}
               ></Route>
               <Route path='/buddycorner' element={!authUser? (<Navigate to="/"/>):(<BuddysCorner/>)}
+              ></Route>
+              <Route path='/todaypage' element={!authUser? (<Navigate to="/"/>):(<Todaypage/>)}
               ></Route>
              </Routes>
             
