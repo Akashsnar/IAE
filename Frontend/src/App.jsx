@@ -3,9 +3,10 @@ import { Route, Routes } from 'react-router-dom'
 import { Toaster } from 'react-hot-toast'
 import Home from './Pages/Home'
 import { Navigate } from 'react-router-dom'
-import BuddysCorner from './Pages/BuddysCorner';
+import Main from './components/Main/Main'
 import BookMarks from './Pages/BookMarks';
 import Todaypage from './Pages/Todaypage'
+import DeletedEntries from './Pages/DeletedEntries'
 function App() {
 
 
@@ -27,7 +28,9 @@ function App() {
               ></Route> */}
               <Route path='/bookmarks' element={!authUser? (<Navigate to="/"/>):(<BookMarks/>)}
               ></Route>
-              <Route path='/buddycorner' element={!authUser? (<Navigate to="/"/>):(<BuddysCorner/>)}
+              <Route path='/buddycorner' element={!authUser? (<Navigate to="/"/>):(<Main/>)}
+              ></Route>
+                <Route path='/deletedentries' element={!authUser? (<Navigate to="/"/>):(<DeletedEntries/>)}
               ></Route>
               <Route path='/todaypage' element={!authUser? (<Navigate to="/"/>):(<Todaypage/>)}
               ></Route>

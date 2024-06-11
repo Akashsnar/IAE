@@ -18,7 +18,7 @@ const Todaypage = () => {
     return (
         <div className="grid grid-cols-4 p-4 bg-blend-lighten h-screen">
             <Sidebar />
-            <div className="col-span-3 bg-green-200 h-full px-2 rounded-lg flex flex-col">
+            <div className="col-span-3 h-full px-2 rounded-lg flex flex-col">
                 <div className="bg-gray-100 p-6">
                     <div className="bg-white p-6 rounded-lg shadow-lg max-w-4xl mx-auto">
                         <div className="flex justify-between items-center mb-4">

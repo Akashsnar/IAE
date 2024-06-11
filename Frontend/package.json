@@ -10,6 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.12.0",
+    "@langchain/community": "^0.2.9",
+    "@langchain/core": "^0.2.6",
     "@material-ui/core": "^4.12.4",
     "@material-ui/icons": "^4.11.3",
     "date-fns": "^3.6.0",
