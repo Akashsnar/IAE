@@ -6,6 +6,9 @@ import { Navigate } from 'react-router-dom'
 import BuddysCorner from './Pages/BuddysCorner';
 import BookMarks from './Pages/BookMarks';
 import Todaypage from './Pages/Todaypage'
+import Journey from './components/Journey'
+import Hard from './components/Hard'
+import Love from './components/Love'
 function App() {
 
 
@@ -28,6 +31,12 @@ function App() {
               <Route path='/bookmarks' element={!authUser? (<Navigate to="/"/>):(<BookMarks/>)}
               ></Route>
               <Route path='/buddycorner' element={!authUser? (<Navigate to="/"/>):(<BuddysCorner/>)}
+              ></Route>
+              <Route path='/love' element={!authUser? (<Navigate to="/"/>):(<Love/>)}
+              ></Route>
+              <Route path='/journey' element={!authUser? (<Navigate to="/"/>):(<Journey/>)}
+              ></Route>
+              <Route path='/hard' element={!authUser? (<Navigate to="/"/>):(<Hard/>)}
               ></Route>
               <Route path='/todaypage' element={!authUser? (<Navigate to="/"/>):(<Todaypage/>)}
               ></Route>

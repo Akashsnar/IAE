@@ -9,7 +9,7 @@ const BookMarks = () => {
 
         {/* Right Component */}
         <div className="col-span-3 bg-green-200 h-full px-2 rounded-lg flex flex-col">
-          <div className='h-1/6 w-full my-2 bg-slate-200 flex justify-center items-center'>
+          <div className='h-[8rem] w-full my-2 bg-slate-200 flex justify-center items-center'>
             <p className='font-bold text-7xl '>
               BookMarks
             </p>
