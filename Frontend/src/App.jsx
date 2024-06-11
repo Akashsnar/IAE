@@ -7,6 +7,9 @@ import Main from './components/Main/Main'
 import BookMarks from './Pages/BookMarks';
 import Todaypage from './Pages/Todaypage'
 import DeletedEntries from './Pages/DeletedEntries'
+import Journey from './components/Journey'
+import Hard from './components/Hard'
+import Love from './components/Love'
 function App() {
 
 
@@ -31,6 +34,12 @@ function App() {
               <Route path='/buddycorner' element={!authUser? (<Navigate to="/"/>):(<Main/>)}
               ></Route>
                 <Route path='/deletedentries' element={!authUser? (<Navigate to="/"/>):(<DeletedEntries/>)}
+              ></Route>
+              <Route path='/love' element={!authUser? (<Navigate to="/"/>):(<Love/>)}
+              ></Route>
+              <Route path='/journey' element={!authUser? (<Navigate to="/"/>):(<Journey/>)}
+              ></Route>
+              <Route path='/hard' element={!authUser? (<Navigate to="/"/>):(<Hard/>)}
               ></Route>
               <Route path='/todaypage' element={!authUser? (<Navigate to="/"/>):(<Todaypage/>)}
               ></Route>
