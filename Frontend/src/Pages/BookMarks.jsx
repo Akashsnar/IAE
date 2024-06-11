@@ -17,7 +17,7 @@ const Bookmarks = () => {
               BookMarks
             </p>
           </div>
-          <div className='flex-1 w-full my-2 bg-slate-200 flex flex-col items-start'>
+          <div className='flex-1 w-full my-2 bg-slate-200 flex flex-col justify-start '>
           <BattleCard heading="Love and Lies" date="6 th June" />
          <BattleCard heading="Its hard" date="7 th June"/>
           
