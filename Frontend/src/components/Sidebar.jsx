@@ -54,12 +54,7 @@ const Sidebar = () => {
             <p className='font-semibold text-xl'>Bookmarked Entries</p>
           </div>
         </Link>
-        <Link to='/deletedentries'>
-          <div className='hover:bg-purple-200 cursor-pointer p-2 w-full bg-purple-100 my-2 rounded-lg flex items-center'>
-            <span role="img" aria-label="Deleted Entries" className='text-2xl mr-2'>🗑️</span>
-            <p className='font-semibold text-xl'>Deleted Entries</p>
-          </div>
-        </Link>
+       
       </div>
 
       <div className="border-b-2 border-gray-300 mx-2 my-4"></div>
@@ -89,21 +84,19 @@ const Sidebar = () => {
 
 
         <div className='flex absolute bottom-0'>
-              <div className='m-2 p-2 w-3/4  rounded-full bg-slate-100'>
-                    Buddy's Corner
-              </div>
+        <Link to='/buddycorner'>
+        <div className='hover:bg-purple-200 cursor-pointer p-2 m-2  bg-purple-100 my-2 rounded-lg flex items-center'>
+          <span role="img" aria-label="Buddy's Corner" className='text-2xl mr-2'>👥</span>
+          <p className='font-semibold text-xl'>Buddy's Wink</p>
+        </div>
+      </Link>
               <div  className='m-2 p-2 w-1/4  bg-slate-100 rounded-full'>
                     Login
               </div>
         </div>
       </div>
 
-      <Link to='/buddycorner'>
-        <div className='hover:bg-purple-200 cursor-pointer p-2 w-full bg-purple-100 my-2 rounded-lg flex items-center'>
-          <span role="img" aria-label="Buddy's Corner" className='text-2xl mr-2'>👥</span>
-          <p className='font-semibold text-xl'>Buddy's Wink</p>
-        </div>
-      </Link>
+     
     </div>
   )
 }

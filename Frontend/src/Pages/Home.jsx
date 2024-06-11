@@ -3,6 +3,8 @@ import Sidebar from '../components/Sidebar';
 import { add, eachDayOfInterval, endOfMonth, endOfWeek, format, getDay, isSameMonth, isToday, parse, startOfToday, startOfWeek } from "date-fns";
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import Calendar from '../components/Calender';
+import BattleCard from '../components/BattleCard';
 
 function capitalizeFirstLetter(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
@@ -35,70 +37,26 @@ const Home = () => {
 
   return (
     <>
-      <div className="grid grid-cols-4 p-4 bg-blend-lighten h-screen">
+      <div className="grid grid-cols-4 h-screen">
         <Sidebar />
 
         {/* Right Component */}
-        <div className="col-span-3  h-full px-2 rounded-lg flex flex-col">
-          <div className='h-1/6 w-full my-2 bg-slate-200 flex justify-center items-center'>
-          <i class="fa-regular fa-calendar text-4xl pr-2"></i>
-            <p className='font-bold text-5xl '>
+        <div className="col-span-3 bg-green-200 h-full px-2 rounded-lg flex flex-col">
+          <div className='h-32 w-full my-2 bg-slate-200 flex justify-center items-center'>
+            <i className="fa-regular fa-calendar text-7xl pr-2"></i>
+            <p className='font-bold text-7xl'>
               All Entries
             </p>
           </div>
-          <div className='flex flex-1 w-full my-2 bg-slate-200'>
-            <div className="p-8 flex flex-col h-screen w-full">
-              <div className="flex items-center justify-between mb-6">
-                <p className="font-bold text-xl">{format(firstDayOfMonth, "MMMM yyyy")}</p>
-                <div className="flex items-center gap-6 sm:gap-12">
-                  <ChevronLeftIcon className="w-6 h-6 cursor-pointer" onClick={getPrevMonth} />
-                  <ChevronRightIcon className="w-6 h-6 cursor-pointer" onClick={getNextMonth} />
-                </div>
-              </div>
-              <hr />
-              <div className="grid grid-cols-7 gap-6 sm:gap-12 place-items-center">
-                {days.map((day, idx) => (
-                  <div key={idx} className="font-semibold">{capitalizeFirstLetter(day)}</div>
-                ))}
-              </div>
-              <div className="grid grid-cols-7 gap-6 sm:gap-12 mt-8 place-items-center">
-                {daysInMonth.map((day, idx) => (
-                  <div key={idx} className={colStartClasses[getDay(day)]}>
-                    <p
-                      className={`cursor-pointer flex items-center justify-center font-semibold h-8 w-8 rounded-full hover:text-white ${isSameMonth(day, today) ? "text-gray-900" : "bg-[#BDBEC4]"} ${!isToday(day) && "hover:bg-blue-500"} ${isToday(day) ? "bg-[#6F0B80] text-white" : ""}`}
-                    >
-                      {format(day, "d")}
-                    </p>
-                  </div>
-                ))}
-              </div>
+          <div className='flex flex-1 w-full my-2 bg-slate-200 overflow-hidden'>
+            <div className="p-8 flex flex-col w-full overflow-hidden">
+              <Calendar/>
             </div>
-            <div className="w-1/3 p-8 flex flex-col">
-              <div className='text-center'>
-              <p>Enteries on:</p>
-              <h2 className="text-xl font-bold mb-1">{format(firstDayOfMonth, "dd MMMM yyyy")}</h2>
-              </div>
-              <hr class="h-px my-2 bg-gray-200 border-0 dark:bg-gray-700"></hr>
-              <table className="w-full">
-                <thead>
-                  <tr>
-                    <th className="border px-4 py-2">Header 1</th>
-                    <th className="border px-4 py-2">Header 2</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className="border px-4 py-2">Data 1</td>
-                    <td className="border px-4 py-2">Data 2</td>
-                  </tr>
-                  <tr>
-                    <td className="border px-4 py-2">Data 4</td>
-                    <td className="border px-4 py-2">Data 5</td>
-                  </tr>
-                  {/* Add more rows as needed */}
-                </tbody>
-              </table>
-            </div>
+            <div className='p-2 m-2 flex flex-col justify-evenly'>
+            <BattleCard heading="Journey SO Far" date="5th June"/>
+         <BattleCard heading="Love and Lies" date="6th June"/>
+         <BattleCard heading="Its Hard" date="7th June"/>
+                   </div>
           </div>
         </div>
       </div>
